@@ -1,0 +1,17 @@
+{
+    "name": "Mark1Mat/twig",
+    "description": "My First Twig Engime Template!",
+    "require": {
+        "twig/twig": "~1.0",
+        "cocur/slugify":"@stable"
+
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matisse ACHEEN",
+            "email": "matissevlp@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
