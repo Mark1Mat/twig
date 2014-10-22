@@ -20,7 +20,7 @@ $twig = new Twig_Environment($loader, [
 
 $article = [
     'name' => 'Le Twig',
-    'content' => 'Page en Twig',
+    'content' => 'Page en Twig!',
 ];
 
 
