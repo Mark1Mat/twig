@@ -8,8 +8,3 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$string ="zeivzuov\"zoubzougozhgzeogaeogoaz";
-
-$slugify = new \Cocur\Slugify\Slugify();
-
-echo $slugify->slugify($string, '_');
