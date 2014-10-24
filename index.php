@@ -18,13 +18,23 @@ $twig = new Twig_Environment($loader, [
     //'cache =>null,
 ]);
 
-$article = [
-    'name' => 'Le Twig',
-    'content' => 'Page en Twig!',
-];
+
+//PDO
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=blog', 'root', 'root');
+} catch(PDOException $e) {
+    mail('matissevlp@gmail.com' , 'BDD Error' , $e->getMessage());
+    throw new PDOException('BDD Error');
+}
+
+$sql = 'SELECT * FROM article';
+$pdoStmt = $pdo->query($sql);
+$articles = $pdoStmt->fetchAll(PDO::FETCH_OBJ);
 
 
 
 echo $twig->render('article.html.twig', [
-    'article' => $article,
+    'articles' => $articles,
+    'kenny' => ['dead' => true],
+
 ]);
