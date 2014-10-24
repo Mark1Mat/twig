@@ -1,25 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% for article in articles %}
-    <h1>{{ article.title }}</h1>
-{% endfor %}
+
+
+{% block title %}
+    {{ parent() }} - My Articles
+{% endblock %}
+
+{% block content %}
+
+    {% for article in articles %}
+        <h1>{{ article.title }}</h1>
+    {% endfor %}
 
 
 
 
 
-{#
 
- {% if kenny.sick %}
-    Kenny is sick.
-{% elseif kenny.dead %}
-    You killed Kenny! You bastard!!!
-{% else %}
-    Kenny looks okay --- so far
-{% endif %}
 
-{% for article in articles %}
-    <h1>{{ article.title }}</h1>
-{% endfor %}
 
-#}
+    {% if kenny.sick %}
+        Kenny is sick.
+    {% elseif kenny.dead %}
+        You killed Kenny! You bastard!!!
+    {% else %}
+        Kenny looks okay --- so far
+    {% endif %}
+
+    {% for article in articles %}
+        <h1>{{ article.title }}</h1>
+    {% endfor %}
+
+{% endblock %}
+
+
+
+
+
